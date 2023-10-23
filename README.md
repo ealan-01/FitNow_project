@@ -27,5 +27,22 @@ FitNow is a fun and easy way to watch and plan your workouts. It helps you stay 
 ***
 ## User Interaction Flowchart: Complete User Journey:
 ![FitNow Flowchart](./flowchart_fitnow.jpg)
+***
+## Underlying Technologies:
+
+**Front-end:**
+- **HTML**: Markup language for creating web pages.
+- **CSS**: Stylesheet language used for describing the look and formatting of a document written in HTML.
+- **JavaScript**: High-level, versatile scripting language that enables interactive web pages.
+
+**Back-end:**
+- **Node.js**: JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express**: Minimal and flexible Node.js web application framework.
+- **Express-session**: Middleware for Express to manage user sessions.
+- **EJS**: Embedded JavaScript templates, a templating engine used to generate HTML markup with plain JavaScript.
+
+**Database:**
+- **MongoDB**: NoSQL database program, using JSON-like documents with optional schemas.
+
 
 
