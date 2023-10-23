@@ -51,6 +51,24 @@ _Description for the first screenshot._
 
 ![Dashboard](./path_to_screenshot_2.jpg)
 _Description for the second screenshot._
+***
+## How to Run the Website:
+### 1. Start the Server:
+Navigate to the project directory in your terminal and run the following command:
+"npm run start"
+### 2. Access the Website:
+Open your preferred web browser and enter the following URL:
+http://localhost:3000
+### 3.Once done, the website should be up and running on your local machine.
+***
+## 🌟 Meet the Makers 🌟:
+- 👩‍💻 [Ealan Alaredih](https://github.com/ealan-01)
+- 👨‍💻 [Nouf Almahmoud](https://github.com/Nouf_SM)
+- 👨‍💻 [Lama Alturki](https://github.com/Lamaturki1)
+- 👨‍💻 [Bayan Alzahrani](https://github.com/BayanAli2)
+
+
+
 
 
   
