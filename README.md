@@ -23,3 +23,6 @@ diary for your workouts and health.
 
 ## To Wrap Up:
 FitNow is a fun and easy way to watch and plan your workouts. It helps you stay on track and reach your fitness goals. Give it a try and get moving!
+
+## User Interaction Flowchart: Complete User Journey:
+
