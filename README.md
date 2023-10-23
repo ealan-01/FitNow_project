@@ -43,6 +43,17 @@ FitNow is a fun and easy way to watch and plan your workouts. It helps you stay 
 
 **Database:**
 - **MongoDB**: NoSQL database program, using JSON-like documents with optional schemas.
+***
+## Project Screenshots:
+
+![Landing Page](./path_to_screenshot_1.jpg)
+_Description for the first screenshot._
+
+![Dashboard](./path_to_screenshot_2.jpg)
+_Description for the second screenshot._
+
+
+  
 
 
 
