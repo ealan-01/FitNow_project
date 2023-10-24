@@ -46,12 +46,24 @@ FitNow is a fun and easy way to watch and plan your workouts. It helps you stay 
 ***
 ## Project Screenshots:
 
-![Landing Page](./path_to_screenshot_1.jpg)
-_Description for the first screenshot._
+### FITnow Sign up page :
+<img src="./sign up.png" alt="Sign up">
 
-![Dashboard](./path_to_screenshot_2.jpg)
-_Description for the second screenshot._
+### FITnow user Log in page :
+<img src="./log in.png" alt="Log in">
+
+### FITnow Homepage :
+<img src="./main 1.png" alt="Homepage">
+<img src="./main 2.png" alt="Homepage">
+
+### FITnow Dashboard page :
+<img src="./dach 1.png" alt="Dashboard">
+<img src="./dash 2.png" alt="Dashboard">
+
+### FITnow user profile page :
+<img src="./profile .png" alt="profile">.
 ***
+
 ## How to Run the Website:
 1. Start the Server:
 Navigate to the project directory in your terminal and run the following command:
