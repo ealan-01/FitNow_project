@@ -1,0 +1,70 @@
+/* ----------------this is for button------------------------*/
+ .btn {
+    position: relative;   
+    display: inline-block;
+    top: 450px;           
+    left: 25%;
+    margin-top: 1.5rem;
+    margin-right: 20px;  /* Adds space to the right of each button */
+    transition: 2s;
+}
+
+.bmi-result {
+    display: none;
+    position: relative;   /* For positioning within .box */
+    top: 70%;             
+    left: 26%;    
+    font-size: 2.6rem;       
+    margin-top: 1rem;
+    color: var(--black);
+    font-family: "Sofia", sans-serif;
+    transition: 2s;
+}
+
+.button-group button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    background-color: var(--dark-blue); 
+    transition: background-color 1s ;
+
+}
+
+.button-group button:hover {
+    background-color: var(--light-blue); 
+}
+.button-group .btn:last-child {
+    margin-right: 0;
+}
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 3;
+        transform: translateY(0);
+    }
+}
+
+.bmi-message {
+    position: relative;
+    left: 9%;
+    font-size: 1.5rem;
+    margin-top: 10px; 
+    opacity: 0; 
+    animation: fadeInSlideUp 1s forwards; 
+    transition: all 2s; 
+}
+
+
+.bmi-normal {
+    color: green;
+    font-family: "Sofia", sans-serif;
+}
+
+.bmi-warning {
+    color: orange;
+    font-family: "Sofia", sans-serif;
+}

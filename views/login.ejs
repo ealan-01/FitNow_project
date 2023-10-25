@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- title (login) -->
+  <title>Sign up & login</title>
+
+  <!-- style.css file link  -->
+  <link rel="stylesheet" href="css/login_style.css" />
+
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+  
+  <main> <!--start main-->
+    
+    <div class="box"> <!--class box the big one-->
+      
+      <div class="inner-box"> <!--class inner-box the small one inside box-->
+        
+        <div class="forms-wrap"> <!--class for forms welcome back-->
+          
+          <!------- login form  ------>
+          <form action="/login" method="post" autocomplete="on" class="sign-in-form">
+            
+            <!-- hidden variable (for javascript) -->
+            <input type="hidden" name="formType" value="login">
+            
+            <!-- logo -->
+            <div class="logo">
+              <img src="./img/logo.png" alt="logo" />
+              <h4 style = "color:#064c72">FITnow</h4>
+            </div>
+            
+            <!-- welcoming phrase -->
+            <div class="heading">
+              <h1 style = "color:#9bb7c6">Welcome Back</h1>
+              <h6>Not registred yet?</h6>
+              <a id='myButton' href="#" class="toggle">Sign up</a>
+            </div>
+            
+            <!-- login form components -->
+            <div class="actual-form">
+              
+              <!-- email field -->
+              <div class="input-wrap">
+                <input type="email" name="email" minlength="4" class="input-field" autocomplete="on" required/>
+                
+                <label>Email</label>
+              
+              </div>
+              
+              <!-- password field -->
+              <div class="input-wrap">
+                <input type="password" name="password" minlength="4" class="input-field" required/>
+                
+                <label>Password</label>
+
+              </div>
+              
+              <!-- display login error message (if any) -->
+              <% if (login_error_message !== '') { %>
+                <div class="error-message">
+                  <p><%= login_error_message %></p>
+                </div>
+              <% } %>
+              
+              <!-- login button -->
+              <input type="submit" value="Log In" class="sign-btn" />
+            
+            </div>
+          
+          </form> <!-- login form end -->
+          
+          <!------- Signup form  ------>
+          <form action="/login" method="post" autocomplete="on" class="sign-up-form">
+            
+            <!-- hidden variable (for javascript) -->
+            <input type="hidden" name="formType" value="signup">
+            
+            <!-- logo -->
+            <div class="logo">
+              <img src="./img/logo.png" alt="logo" />
+              <h4 style = "color:#064c72">FITnow</h4>
+            </div>
+            
+            <!-- getting started phrase -->
+            <div class="heading">
+              <h2 style = "color:#9bb7c6">Get Started</h2>
+              <h6>Already have an account?</h6>
+              <a href="#" class="toggle">Log in</a>
+            </div>
+            
+            <!-- Signup form components --> 
+            <div class="actual-form">
+              
+              <!-- First name field -->
+              <div class="input-wrap">
+                <input type="text" name="firstname" minlength="3" class="input-field" required/>
+                
+                <label>First Name</label>
+              
+              </div>
+
+              <!-- Last name field -->
+              <div class="input-wrap">
+                <input type="text" name="lastname" minlength="3" class="input-field" required/>
+                
+                <label>Last Name</label>
+              
+              </div>
+              
+              <!-- email field -->
+              <div class="input-wrap">
+                <input type="email" name="email" class="input-field" required/>
+                
+                <label>Email</label>
+              
+              </div>
+              
+              <!-- password field -->
+              <div class="input-wrap">
+                <input type="password" name="password" minlength="4" class="input-field" required/>
+                
+                <label>Password</label>
+              
+              </div>
+
+              <!-- Weight field -->
+              <div class="input-wrap">
+                <input type="number" name="weight" class="input-field" required/>
+                
+                <label>Weight (kg)</label>
+              
+              </div>
+
+              <!-- Height field -->
+              <div class="input-wrap">
+                <input type="number" name="height" class="input-field" required/>
+                
+                <label>Height (cm)</label>
+              
+              </div>
+
+              <!-- Target calories field -->
+              <div class="input-wrap">
+                <input type="number" name="calories" class="input-field" required/>
+
+                <label>Target calories per day (kcal)</label>
+              
+              </div>
+
+              <!-- Gender radio button -->
+              <div class="input-wrap">
+                <label style="color: black;"><strong>Gender</strong></label>
+                  <br>
+                  <select name="gender" class="input-field" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                
+              </div>
+
+              <!-- display signup error message (if any) -->
+              <% if (signup_error_message !== '') { %>
+                <div class="error-message">
+                  <p><%= signup_error_message %></p>
+                </div>
+              <% } %>
+              
+              <!-- sign up button -->
+              <input type="submit" value="Sign Up" class="sign-btn" />
+            
+            </div>
+          
+          </form> <!-- signup form end -->
+        
+        </div>
+        
+        <!-- the image slider -->
+        <div class="carousel">
+          
+          <!-- the pets image -->
+          <div class="images-wrapper">
+            <img src="./img/login.png" class="image img-1 show" alt="" />
+          </div>
+          
+          <div class="text-slider">
+            
+            <div class="text-wrap">
+              <div class="text-group">
+                <h2>The <span style = "color:#9bb7c6">secret</span>  of getting <br> 
+                  ahead is getting <span style = "color:#9bb7c6">started</span></h2>
+              </div>
+            </div>
+          
+          </div>
+        
+        </div>
+      
+      </div> <!--class inner-box-->
+    
+    </div><!--class box end-->
+  
+  </main> <!--end main-->
+
+  
+
+  <!-- custom js file link  -->
+  <script src="js/login_script.js"></script> <!--javascript file-->
+
+  <!-- for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--Bootstrap javascript files-->
+  <script src="js/unpkg.com_@popperjs_core@2.11.8_dist_umd_popper.min.js"></script>
+  <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+</body>
+</html>

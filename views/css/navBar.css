@@ -1,0 +1,482 @@
+/*-----------------------------------*\
+  #Fotns
+\*-----------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Montserrat:wght@500&family=Nunito:wght@800&display=swap');
+
+
+/*-----------------------------------*\
+  #General Style (entire html document)
+\*-----------------------------------*/
+
+
+/* variables */
+:root {
+  --dark-green: #383f60;
+  --darker-green: #242524;
+  --light-green: #064c72;
+  --black: #292A2E;
+  --grey: #666;
+  --light-grey: #92999f;
+  --lighter-grey: #f7f7f7;
+  --white: #fff;
+
+
+}
+
+/* Style the entire website */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+/* style the html to style the scoll bar*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8.5rem;
+}
+
+/* style the size of the scroll bar*/
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/*style the scrollbar background*/
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}/*style the scrollbar thumb (the component to be clicked by mouse)*/
+
+
+
+/*style the scrollbar thumb (the component to be clicked by mouse)*/
+html::-webkit-scrollbar-thumb {
+  background-color: #064c72;
+  border-radius: 5rem;
+}
+
+
+/* style all sections*/
+section {
+  padding: 2rem 9%;
+}
+
+/* style all links*/
+a {
+  text-decoration: none;
+}
+
+
+/*-----------------------------------*\
+  #Header
+\*-----------------------------------*/
+
+
+
+/*style the header box*/
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.5rem 11%;
+}
+/*style the logo text and logo icon*/
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+  }
+  
+  /* style the logo icon */
+  .header .logo .logo1 {
+    padding-right: .5rem;
+  
+  width: 45px;
+  height: 45px;
+  
+  }
+
+/* style the navbar links (e.g. Home, About, etc)*/
+.header .navbar a {
+  font-size: 1.8rem;
+  margin: 0 1rem;
+  color: var(--grey);
+}
+
+.header .navbar a:hover {
+  color: #064c72;
+}
+
+/* Style the line appears under the navbar links when hovering*/
+.header .navbar .navbar-home-btn::after,
+.header .navbar .navbar-about-btn::after,
+.header .navbar .navbar-pets-btn::after,
+.header .navbar .navbar-contact-btn::after {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #064c72;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Animate the line under the navbar button */
+.header .navbar .navbar-home-btn:hover::after,
+.header .navbar .navbar-about-btn:hover::after,
+.header .navbar .navbar-pets-btn:hover::after,
+.header .navbar .navbar-contact-btn:hover::after {
+  width: 100%;
+}
+
+/* navar buttons (login and menue bar)*/
+.header .navbar-buttons div {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  background-color: #064c72;
+  color: var(--black);
+  border-radius: .5rem;
+  margin-left: .3rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* style login button in the navbar*/
+.header .navbar-buttons button {
+  height: 4rem;
+  width: 12rem;
+  font-size: 1.5rem;
+  background: var(--white);
+  color: var(--dark-green);
+  border: .09rem #064c72 solid;
+  border-radius: 4rem;
+  margin-left: .3rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header .navbar-buttons button:hover {
+  color: var(--white);
+  background-color: #064c72;
+}
+
+/* style the menu bar button in the navbar (appears when shrinking the website size)*/
+.header .navbar-buttons div:hover {
+  color: var(--white);
+  background-color: #064c72;
+}
+
+/* the menu bar will not appear unless the user shrink the window */
+#menu-btn {
+  display: none;
+}
+
+
+/* style the entire footer section*/
+.footer {
+    background-color: var(--black);
+    color: var(--grey);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  /* style the logo icon */
+  .footer .logo .logo1 {
+    padding-right: .5rem;
+    width: 45px;
+    height: 45px;
+    
+  
+  }
+  
+  
+  /* style the footer top */
+  .footer-top {
+    padding-block-start: 10%;
+  }
+  
+  /* style the container inside the footer top */
+  .footer-top .container {
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    display: grid;
+    gap: 7%;
+  }
+  
+  
+  /*-----------------------------------*\
+    # Footer-left
+  \*-----------------------------------*/
+  
+  
+  /* style the "pawfect" title */
+  .footer-left .footer-company-about h3 {
+    display: block;
+    color: var(--white);
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* style the small paragraph under the title*/
+  .footer-left .footer-company-about p {
+    line-height: 20px;
+    color: #cddbe2;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 10px;
+    padding-top: 0;
+  }
+  
+  /* style social media icons container*/
+  .footer-left .social-icons-container {
+    margin: 10px;
+  }
+  
+  /* style the social media icon circle */
+  .footer-left .social-icons-container a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--white)fff;
+    margin: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* style the social media icon itself (inside the circle)*/
+  .footer-left .social-icons-container a ion-icon {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 12px;
+    border-radius: 50%;
+    transition: 0.25s ease;
+  }
+  
+  /* style social media icon when hover*/
+  .footer-left .social-icons-container a :hover {
+    background-color: #cddbe2;
+    color: var(--white);
+  }
+  
+  
+  /*-----------------------------------*\
+    # Footer-center
+  \*-----------------------------------*/
+  
+  
+  /* style the links in the footer center*/
+  .footer-links {
+    color: var(--white);
+    display: inline;
+    text-decoration: none;
+    font-size: 1.6rem;
+    display: block;
+    margin: 1rem;
+  }
+  
+  /* style the links when hovering*/
+  .footer-links:hover {
+    color: #959a9c;
+  }
+  
+  
+  /*-----------------------------------*\
+    # Footer-right
+  \*-----------------------------------*/
+  
+  
+  /* style the right footer section (contain the contact information)*/
+  .footer-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 2.3rem;
+    height: 12rem;
+  }
+  
+  /* style the contact information section*/
+  .footer-right .contact-info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 20rem;
+    flex: 1 1 20rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  
+  /* style the contact information icons*/
+  .footer-right .contact-info i {
+    font-size: 2rem;
+    color: #cddbe2;
+  }
+  
+  /* style the contact information text*/
+  .footer-right .contact-info span {
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+  
+  /* style the email in the contact information section*/
+  .footer-right .contact-info span a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  
+  /*-----------------------------------*\
+    # Footer-bottom
+  \*-----------------------------------*/
+  
+  
+  
+  /* style the footer bottom box*/
+  .footer-bottom {
+    padding-block: 20px;
+  }
+  
+  /* style the copyright sentence in the bottom*/
+  .copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  
+  
+  /*-----------------------------------*\
+    # Media section (for responsive website)
+  \*-----------------------------------*/
+  
+  
+  
+  
+  @media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .header {
+      padding: 2rem;
+    }
+  
+    section {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #menu-btn {
+      display: inline-block;
+    }
+  
+    .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    .header .navbar.active {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  
+    .header .navbar a {
+      font-size: 2rem;
+      margin: 2rem;
+      display: block;
+    }
+  
+    .home .home-parallax-img {
+      top: 0;
+      right: 0;
+      width: 130%;
+    }
+  
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+  
+    .home .content h3 {
+      font-size: 3rem;
+    }
+  
+    .home .content p {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* media for the swiper*/
+  /*completly responded*/
+  @media (min-width: 320px) {
+    .board {
+      width: auto;
+    }
+  
+    .swiper {
+      width: 320px;
+    }
+  
+    .board>h1,
+    p {
+      padding: 0 2em;
+    }
+  }
+  
+  /*completly responded with fingers*/
+  @media (min-width: 768px) {
+    .board {
+      width: 100%;
+    }
+  
+    .swiper {
+      width: 600px;
+    }
+  
+    .swiper .swiper-button-prev,
+    .swiper-button-next {
+      display: initial;
+    }
+  
+  }

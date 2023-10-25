@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title (name of website) -->
+  <title>Dashboard</title>
+
+  <!-- font link (awesome cdn) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- swiper link (for customer reviews section) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- style.css file link  -->
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/navBar.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <script src="https://unpkg.com/js-confetti"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/index.min.js"></script>
+  <script src="confettiTrigger.js"></script>
+  <script src="js/cal.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <!-- header section starts  -->
+
+  <header class="header">
+
+    <!-- logo -->
+    <a href="#" class="logo"><img class="logo1" src="img/weight.png" alt="">FITnow  </a>
+
+    <!-- navbar -->
+    <nav class="navbar ">
+      <a href="/main" class="navbar-home-btn">Home</a>
+      <a href="/profile" class="navbar-about-btn">profile</a>
+      <a href="#about" class="navbar-about-btn">Dashboard</a>
+      <a href="#footer" class="navbar-contact-btn">Contact</a>
+
+    </nav>
+
+    <!-- navbar buttons (login button)-->
+    <div class="navbar-buttons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <% if ( !isAuth) { %>
+        <!-- if the user did not log in (Not authorized) 
+                      display the Login button -->
+        <a href="/Login"><button id="login-btn" value="logout">Log Out</button></a>
+
+        <% } else { %>
+          <!-- if the user logged in (Authorized) change the login button to the profile button -->
+          <a href="/profile" class="logo"> <i class="fas fa-user" style="color: #064c72;"></i> </a>
+          <a href="/logout"><button id="login-btn" value="logout">Logout</button></a>
+          <%} %>
+
+    </div>
+
+  </header>
+
+
+  <!-- header section ends  -->
+  <main> <!--start main-->
+    <div class="box"> <!--class box the big one-->
+      <div class="inner-box"> <!--class inner-box the small one inside box-->
+        <div class="forms-wrap"> <!--class for forms welcome back-->
+          <div class="heading">
+            <h2>Transform, <span class="highlight">Evolve</span>, and Be the Best You.</h2>
+          </div>
+          <!------- select exercise form  ------>
+          <div class="exercise-grid">
+            <label for="exercise">What's Your Move Today?</label>
+            <select id="exercise" name="exercise">
+              <option value="cardio">Cardio</option>
+              <option value="weightlifting">Weightlifting</option>
+              <option value="yoga">Yoga and Stretching</option>
+              <option value="pilates">Pilates</option>
+            </select>
+
+            <label for="minutes">Minutes:</label>
+            <input type="number" id="minutes" name="minutes" min="1" placeholder="Enter minutes">
+          </div>
+          <span class="total">Fantastic! You've burned calories. Keep it up!</span>
+          <span class="total" id="calories"></span> <!-- This will get updated with JavaScript later when we add it -->
+        </div>
+        <div class="circular-progress">
+          <svg class="circle-svg">
+            <!-- Define the gradient -->
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#376f8e; stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#3498db; stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#6993aa; stop-opacity:1" />
+              </linearGradient> 
+            </defs>
+
+            <!-- Background Circle -->
+            <circle class="circle-bg" cx="100" cy="100" r="85"></circle>
+
+            <!-- Foreground Circle with Gradient -->
+            <circle class="circle-fg" cx="100" cy="100" r="85" stroke="url(#gradient)"></circle>
+          </svg>
+
+          <div class="circle-text"> ........ left </div>
+        </div>
+        <h5 class="prtext">Almost There!Keep Pushing!</h5>
+      </div>
+      <div class="button-group">
+        <button id="resetBtn" type="button" class="btn btn-primary btn-lg">Reset Everything</button>
+        <button id="calculateBtn" type="button" class="btn btn-primary btn-lg">Calculate Calories Burned</button>
+        <button id="showBmiBtn" type="button" class="btn btn-primary btn-lg">Show BMI</button>
+
+      </div>
+
+      <div class="bmi-result" style="display:none;">
+        Your BMI is: <span id="bmiValue"></span>
+        Category: <span id="bmiCategory"></span>
+      </div>
+    </div>
+
+
+  </main> <!--end main-->
+
+
+
+
+
+  <!-- footer section starts  -->
+
+
+  <section class="footer" id="footer" style="background-image: url('img/fot.png')">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <!-- footer - left -->
+        <div class="footer-left">
+
+          <!-- about the website -->
+          <div class="footer-company-about">
+
+            <h3> <a href="#" class="logo" style="color: white;"><img class="logo1" src="img/weight.png" alt="">FITnow !
+            </h3>
+            <p>
+              <strong>FITnow!</strong> This site has been created as a requirement for the (CS-346) Web
+              application
+              development Course at Imam Muhammad Bin Saud Islamic University.
+            </p>
+
+          </div>
+
+          <!-- social media icons -->
+          <div class="social-icons-container">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+
+        </div>
+
+        <!-- footer - center -->
+        <div class="footer-center">
+
+          <a href="#" class="footer-links">About Us</a>
+          <a href="#" class="footer-links">Contact Us</a>
+          <a href="#" class="footer-links">Privacy Policy</a>
+          <a href="#" class="footer-links">Terms of Service</a>
+          <a href="#" class="footer-links">FAQs</a>
+
+        </div>
+
+        <!-- footer - right -->
+        <div class="footer-right">
+
+          <div class="contact-info">
+            <i class="fa fa-location-dot"> </i>
+            <span>Saudi Arabia - Riyadh</span>
+          </div>
+
+          <div class="contact-info">
+            <i class="fa fa-phone"> </i>
+            <span>+966 555555555</span>
+          </div>
+
+          <div class="contact-info">
+            <i class="fa fa-envelope"> </i>
+            <span><a href="mailto:support@gmail.com">support@gmail.com</a></span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- copyright sentence -->
+      <div class="footer-bottom">
+
+        <div class="container">
+          <p class="copyright">&copy; 2023 Made with ♥ by Bayan, Ealan, Lama, Nouf</p>
+        </div>
+
+      </div>
+
+  </section>
+
+
+  <!-- footer section ends -->
+
+
+
+  <!-- custom js file link  -->
+
+  <!-- for reviews slider -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> <!--swiper CDN-->
+
+  <!-- js file -->
+  <script src="js/main_script.js"></script>
+
+  <!-- js for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--Bootstrap javascript files-->
+  <script src="js/unpkg.com_@popperjs_core@2.11.8_dist_umd_popper.min.js"></script>
+  <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>

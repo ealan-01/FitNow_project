@@ -1,0 +1,292 @@
+/*-----------------------------------*\
+  #Fotns
+\*-----------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Montserrat:wght@500&family=Nunito:wght@800&display=swap');
+
+/* variables */
+:root {
+  --dark-blue: #064c72;
+  --light-blue: #cddbe2;
+  --black: #141516;
+  --white: #fff;
+}
+
+/*
+   Apply a global reset to all elements and their ::before and ::after pseudo-elements.
+   This ensures consistent styling and removes default padding and margins from all elements.
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color:var(--light-blue);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  height: 700px;
+  background-color:var(--white);
+  border-radius: 4rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+
+ 
+}
+
+.inner-box {
+  position: absolute;
+  width: calc(100% - 10rem);
+  height: calc(100% - 10rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  display: grid;
+  place-items: center;
+  height: 70%;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--black);
+  margin: 4;
+  font-family: "Sofia", sans-serif;
+  transform: translateY(-50px);
+  transition: 2s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 7;
+  }
+}
+
+/* change Evolove color */
+.highlight {
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--dark-blue);
+  margin: 0;
+  font-family: "Sofia", sans-serif;
+  text-shadow: 3px 3px 3px var(--light-blue);
+  animation: pulse 2s infinite;
+  /* Add a pulsing animation */
+}
+
+label {
+  position: relative;
+  font-size: 2.6rem;
+  color: var(--black);
+  pointer-events: none;
+  transition: 2s;
+  font-family: "Sofia", sans-serif;
+  margin-top: 20%;
+  transform: translateY(-50px);
+}
+
+.exercise-grid {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-gap: 25px;
+  align-items: center;
+
+}
+
+select,
+input[type="number"] {
+  /* styling */
+  position: relative;
+  background-color: white;
+  border: thin solid var(--dark-blue);
+  border-radius: 9px;
+  display: inline-block;
+  font: inherit;
+  line-height: 3em;
+  padding: 0.4em 3.5em 0.5em 1em;
+  width: 400px;
+  transform: translateY(-35px);
+  font-size: 1.5rem;
+
+  /* reset */
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select,
+input[type="number"].round {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--dark-blue) 50%),
+    linear-gradient(135deg, var(--dark-blue) 50%, transparent 50%),
+    radial-gradient(#ddd 70%, transparent 72%);
+  background-position:
+    calc(100% - 23px) calc(1em + 2px),
+    calc(100% - 18px) calc(1em + 2px),
+    calc(100% - .5em) .5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2em 2em;
+  background-repeat: no-repeat;
+}
+
+select,
+input[type="number"].round:focus {
+  background-image:
+    linear-gradient(50deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    radial-gradient(var(--dark-blue) 70%, transparent 72%);
+  background-position:
+    calc(100% - 23px) calc(1em + 2px),
+    calc(100% - 18px) calc(1em + 2px),
+    calc(100% - .5em) .5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2em 2em;
+  background-repeat: no-repeat;
+  border-color: #064c72;
+  outline: 0;
+}
+
+.total {
+  position: relative;
+  font-size: 2.6rem;
+  color: var(--black);
+  pointer-events: none;
+  transition: 2s;
+  font-family: "Sofia", sans-serif;
+  top: 10px;
+  transform: translateY(-50px);
+}
+
+.circular-progress {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  left: 75%;
+  bottom: 45%;
+}
+
+.circle-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circle-bg,
+.circle-fg {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circle-bg {
+  stroke: #064c72;
+  stroke-width: 17;
+  /* Increased width */
+}
+
+.circle-fg {
+  stroke: url(#gradient);
+  stroke-width: 10;
+  /* Increased width */
+  stroke-dasharray: 628.32;
+  stroke-dashoffset: 628.32;
+  transition: stroke-dashoffset 3s;
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -50%);
+  font-size: 40px;
+  z-index: 1;
+}
+
+
+@keyframes bounceInHarder {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    /* Increase this value to make it bounce higher */
+  }
+
+  60% {
+    transform: translateY(-10px);
+    /* Increase this value to make it bounce higher */
+  }
+}
+
+.prtext {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  font-size: 1.7rem;
+  animation: bounceInHarder 3s infinite;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Sofia", sans-serif;
+  color: var(--black);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  left: 76%;
+  bottom: 40%;
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
