@@ -75,9 +75,9 @@ http://localhost:3000
 ***
 ## 🌟 Meet the Makers 🌟:
 - 👩‍💻 [Ealan Alaredih](https://github.com/ealan-01)
-- 👨‍💻 [Nouf Almahmoud](https://github.com/Nouf_SM)
-- 👨‍💻 [Lama Alturki](https://github.com/Lamaturki1)
-- 👨‍💻 [Bayan Alzahrani](https://github.com/BayanAli2)
+- 👩‍💻 [Nouf Almahmoud](https://github.com/Nouf_SM)
+- 👩‍💻 [Lama Alturki](https://github.com/Lamaturki1)
+- 👩‍💻 [Bayan Alzahrani](https://github.com/BayanAli2)
 
 
 
